@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /*TypeScript가 지원하는 가장 높은 버전*/
+    "target": "ESNext",
+
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    /*svg 파일 사용을 위해 정의*/
+    "types": ["vite/client", "vite-plugin-svgr/client", "node"],
+
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+
+    /*절대경로 사용을 위해 정의*/
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+
+    /*node module 방식을 사용하기 위해 사용*/
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+
+    /*import React from "react" 방식의 임포트를 하기 위해서 사용*/
+    "allowSyntheticDefaultImports": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  /*svg 파일 형식을 사용하기 위해 정의*/
+  "include": ["src/**/*", "src/custom.d.ts", "src/vite-env.d.ts"]
+}
